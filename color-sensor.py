@@ -39,15 +39,23 @@ try:
 			gray_scale = convert_to_gray_scale(color_rgb[0], color_rgb[1], color_rgb[2])
 			
 			print("Gray Scale Value: " + str(gray_scale))
+			if gray_scale < 10.0:
+				print("More than 1/2 ink remaining.")
+			else:
+				print("Less than 1/2 ink remaining! Consider replacing the ink.")
 			print("---------Ink level detection is done-------------")
 			print("")
 			print("")
 			print("")
 			
+			
 			time.sleep(1)
 except KeyboardInterrupt:
 	GPIO.cleanup()
 
+
+
+	
 
 	
 
